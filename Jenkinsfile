@@ -13,7 +13,7 @@ pipeline {
 	}
 	stage('stage1') {
 	    steps {
-	        sh "./stage1.sh"
+	        sh "pwd"
 	    }
 	}
     }
