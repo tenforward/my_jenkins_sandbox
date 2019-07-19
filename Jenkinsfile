@@ -11,10 +11,12 @@ pipeline {
 		    branch: 'master'
 	    }
 	}
-	stage('step1') {
-	    steps {
-	        def result = sh ( script: "./step1.sh", returnStatus: true )
+	node {
+	    stage('step1') {
+	        steps {
+	            def result = sh ( script: "./step1.sh", returnStatus: true )
+	        }
 	    }
-	}
+        }
     }
 }
