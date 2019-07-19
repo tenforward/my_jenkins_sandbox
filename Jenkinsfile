@@ -14,8 +14,9 @@ pipeline {
         }
         stage('step1') {
             steps {
-	        def tako = "tako"
-                sh(script: "./step1.sh", returnStatus: true)
+	    	script {
+		    def ret = sh(script: "./step1.sh", returnStatus: true)
+		}
             }
         }
     }
