@@ -3,6 +3,12 @@ pipeline {
         image "ubuntu"
     }
     stages {
+    	stage('pull') {
+	    steps {
+	        git url: "git@github.com:tenforward/my_jenkins_sandbox.git",
+		    branch: "master"
+	    }
+	}
         stage('stage1') {
 	    steps {
 	        def stage1 = sh script: ./stage1.sh, returnStdout: true
