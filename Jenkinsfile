@@ -11,10 +11,8 @@ pipeline {
                     branch: 'master'
             }
         }
-        node {
-            stage('step1') {
-                sh script: "./step1.sh", returnStatus: true
-            }
+        stage('step1') {
+            sh(script: "./step1.sh", returnStatus: true)
         }
     }
 }
