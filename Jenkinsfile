@@ -11,7 +11,7 @@ pipeline {
 	}
         stage('stage1') {
 	    steps {
-	        def stage1 = sh script: ./stage1.sh, returnStdout: true
+	        def stage1 = sh script: "./stage1.sh", returnStdout: true
 	    }
 	stage('stage2') {
 	    steps {
