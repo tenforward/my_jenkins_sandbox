@@ -16,6 +16,7 @@ pipeline {
                 script {
                     def ret = sh(script: "./step1.sh", returnStatus: true)
                 }
+		echo $ret
             }
         }
     }
