@@ -1,22 +1,20 @@
 pipeline {
     agent {
         docker {
-	    image 'ubuntu'
-	}
+            image 'ubuntu'
+        }
     }
     stages {
-    	stage('pull') {
-	    steps {
-	        git url: 'git@github.com:tenforward/my_jenkins_sandbox.git',
-		    branch: 'master'
-	    }
-	}
-	node {
-	    stage('step1') {
-	        steps {
-	            def result = sh ( script: "./step1.sh", returnStatus: true )
-	        }
-	    }
+        stage('pull') {
+            steps {
+                git url: 'git@github.com:tenforward/my_jenkins_sandbox.git',
+                    branch: 'master'
+            }
+        }
+        node {
+            stage('step1') {
+                sh ( script: "./step1.sh", returnStatus: true
+            }
         }
     }
 }
