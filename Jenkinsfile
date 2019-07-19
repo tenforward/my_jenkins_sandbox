@@ -11,10 +11,15 @@ pipeline {
 		    branch: 'master'
 	    }
 	}
+	stage('test') {
+	    steps {
+	        sh "uname -a"
+	    }
+	}
+	/*
         stage('stage1') {
 	        def stage1 = sh ( script: './stage1.sh', returnStdout: true )
 	}
-	/*
 	stage('stage2') {
 	    steps {
 	        def stage2 = sh ( script: './stage2.sh ${stage1}', returnStdout: true )
