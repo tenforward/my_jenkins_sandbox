@@ -11,7 +11,6 @@ pipeline {
 		    branch: 'master'
 	    }
 	}
-	/**
         stage('stage1') {
 	    steps {
 	        def stage1 = sh ( script: './stage1.sh', returnStdout: true )
@@ -22,6 +21,5 @@ pipeline {
 		echo "${stage2}"
 	    }
 	}
-	**/
     }
 }
