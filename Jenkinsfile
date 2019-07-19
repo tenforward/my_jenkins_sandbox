@@ -1,4 +1,3 @@
-def ret = 0
 pipeline {
     agent {
         docker {
@@ -14,9 +13,9 @@ pipeline {
         }
         stage('step1') {
             steps {
-	    	script {
-		    def ret = sh(script: "./step1.sh", returnStatus: true)
-		}
+                script {
+                    def ret = sh(script: "./step1.sh", returnStatus: true)
+                }
             }
         }
     }
