@@ -11,9 +11,9 @@ pipeline {
 		    branch: 'master'
 	    }
 	}
-	stage('stage1') {
+	stage('step1') {
 	    steps {
-	        sh "pwd"
+	        sh "./step1.sh"
 	    }
 	}
     }
