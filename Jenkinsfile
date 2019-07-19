@@ -12,7 +12,9 @@ pipeline {
             }
         }
         stage('step1') {
-            sh(script: "./step1.sh", returnStatus: true)
+	    steps {
+                sh(script: "./step1.sh", returnStatus: true)
+	    }
         }
     }
 }
