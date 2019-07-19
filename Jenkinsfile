@@ -13,7 +13,7 @@ pipeline {
         }
         node {
             stage('step1') {
-                sh ( script: "./step1.sh", returnStatus: true
+                sh script: "./step1.sh", returnStatus: true
             }
         }
     }
