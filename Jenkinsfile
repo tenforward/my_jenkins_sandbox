@@ -13,7 +13,7 @@ pipeline {
         }
         stage('step1') {
 	    steps {
-                sh(script: "./step1.sh", returnStatus: true)
+                def ret = sh(script: "./step1.sh", returnStatus: true)
 	    }
         }
     }
