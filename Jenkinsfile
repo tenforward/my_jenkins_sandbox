@@ -16,7 +16,7 @@ pipeline {
         stage('step1') {
             steps {
                 script {
-                    ret = sh(script: "./step1.sh", returnStdout: true)
+                    ret = sh(script: "./step1.sh ${VAL}", returnStdout: true)
                     echo "$ret"
                 }
             }
