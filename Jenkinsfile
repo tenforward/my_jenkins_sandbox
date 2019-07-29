@@ -31,7 +31,7 @@ pipeline {
         }
         stage('job1') {
             steps {
-                build(job: "job1", parameters: [string(name: "PARAM", value: "やっつけたる")])
+                build(job: "job1", parameters: [string(name: "PARAM", value: "${ret2}")])
             }
         }
     }
