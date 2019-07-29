@@ -29,10 +29,10 @@ pipeline {
                 }
             }
         }
-	stage('job1') {
-	    steps {
-	        build job: "jobtest_1", parameters[string(name: "PARAM", value: "TESTTEST")]
-	    }
-	}
+        stage('job1') {
+            steps {
+                build job: "jobtest_1", parameters[string(name: "PARAM", value: "TESTTEST")]
+            }
+        }
     }
 }
