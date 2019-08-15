@@ -25,6 +25,20 @@ pipeline {
 		    echo $TAKO
 		    ''',
 		    returnStdout: true)
+
+                    IKA = sh(script: '''
+		    #!/bin/bash
+		    . ./parameter
+		    echo $IKA
+		    ''',
+		    returnStdout: true)
+
+                    HOGE = sh(script: '''
+		    #!/bin/bash
+		    . ./parameter
+		    echo $HOGE
+		    ''',
+		    returnStdout: true)
                 }
 
             }
@@ -39,7 +53,7 @@ pipeline {
         stage('step1') {
             steps {
                 script {
-                    ret = sh(script: "./step1.sh ${VAL}", returnStdout: true)
+                    ret = sh(script: "./step1.sh ${HOGE}", returnStdout: true)
                     echo "$ret"
                 }
             }
