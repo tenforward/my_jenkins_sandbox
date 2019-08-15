@@ -21,7 +21,7 @@ pipeline {
                 script {
                     TAKO = sh(script: """
 		    #!/bin/bash
-		    . ./parameter
+		    source ./parameter
 		    echo $TAKO
 		    """, returnStdout: true)
                 }
