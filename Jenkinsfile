@@ -23,6 +23,7 @@ pipeline {
 		    IKA = sh(script: ". parameter && echo $IKA", returnStdout: true)
 		    HOGE = sh(script: ". parameter && echo $HOGE", returnStdout: true)
 		}
+		sh "pwd && ls ."
 	    }
 	}
 	stage('echo_env') {
