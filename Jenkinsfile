@@ -19,12 +19,13 @@ pipeline {
         stage('read_env') {
             steps {
                 script {
-                    TAKO = sh(script: """
+                    TAKO = sh(script: '''
 		    #!/bin/bash
 		    cat ./parameter
 		    . ./parameter
 		    echo $TAKO
-		    """, returnStdout: true)
+		    ''',
+		    returnStdout: true)
                 }
 
             }
