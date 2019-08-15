@@ -18,11 +18,11 @@ pipeline {
         }
         stage('read_env') {
             steps {
-                sh "pwd && ls ."
                 script {
-                    TAKO = sh(script: ". parameter && echo $TAKO", returnStdout: true)
-                    IKA = sh(script: ". parameter && echo $IKA", returnStdout: true)
-                    HOGE = sh(script: ". parameter && echo $HOGE", returnStdout: true)
+		    sh "pwd && ls ."
+                    TAKO = sh(script: ". ./parameter && echo $TAKO", returnStdout: true)
+                    IKA = sh(script: ". ./parameter && echo $IKA", returnStdout: true)
+                    HOGE = sh(script: ". ./parameter && echo $HOGE", returnStdout: true)
                 }
 
             }
