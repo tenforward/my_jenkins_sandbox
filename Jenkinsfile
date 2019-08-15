@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('pull') {
             steps {
-                git url: 'git@github.com:tenforward/my_jenkins_sandbox.git',
+                git url: 'https://github.com/tenforward/my_jenkins_sandbox.git',
                     branch: 'master'
             }
         }
