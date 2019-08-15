@@ -19,9 +19,9 @@ pipeline {
 	stage('read_env') {
 	    steps {
 	        script {
-	    	    TAKO = sh(script ". parameter && echo $TAKO", returnStdout: true)
-		    IKA = sh(script ". parameter && echo $IKA", returnStdout: true)
-		    HOGE = sh(script ". parameter && echo $HOGE", returnStdout: true)
+	    	    TAKO = sh(script: ". parameter && echo $TAKO", returnStdout: true)
+		    IKA = sh(script: ". parameter && echo $IKA", returnStdout: true)
+		    HOGE = sh(script: ". parameter && echo $HOGE", returnStdout: true)
 		}
 	    }
 	}
