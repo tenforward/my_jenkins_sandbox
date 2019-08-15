@@ -1,5 +1,8 @@
 def ret = ""
 def ret2 = ""
+def TAKO = ""
+def IKA = ""
+def HOGE = ""
 pipeline {
     agent {
         docker {
@@ -13,6 +16,22 @@ pipeline {
                     branch: 'master'
             }
         }
+	stage('read_env') {
+	    steps {
+	        script {
+	    	    TAKO = sh(script ". parameter && echo $TAKO", returnStdout: true)
+		    IKA = sh(script ". parameter && echo $IKA", returnStdout: true)
+		    HOGE = sh(script ". parameter && echo $HOGE", returnStdout: true)
+		}
+	    }
+	}
+	stage('echo_env') {
+	    steps {
+	      sh "echo $TAKO"
+	      sh "echo $IKA"
+	      sh "echo $HOGE"
+	    }
+	}
         stage('step1') {
             steps {
                 script {
